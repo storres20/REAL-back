@@ -6,7 +6,7 @@ const app = express();
 
 var corsOptions = {
   //origin: "http://localhost:8081"; //CRUD website
-  origin: "https://crudreal.netlify.app/" //CRUD website
+  origin: "https://crudreal.netlify.app" //CRUD website
 };
 
 app.use(cors(corsOptions));
