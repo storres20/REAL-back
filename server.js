@@ -5,7 +5,8 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081" //CRUD website
+  //origin: "http://localhost:8081" //CRUD website
+  origin: "https://web.postman.co/workspace/My-Workspace~7e2759bf-58c5-4529-82be-0d1a6d69ae18/request/create?requestId=1c685414-5855-4191-9058-082fc4b0b82c" //CRUD website
   //origin: "https://crudreal.netlify.app" //CRUD website
 };
 
