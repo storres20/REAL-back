@@ -1,0 +1,70 @@
+version: '3.1'
+services:
+  
+  #web:
+  #  image: nginx:alpine
+  #  ports:
+  #    - 80:80
+    #volumes:
+    #  - ./public_html:/public_html
+    #  - ./conf.d:/etc/nginx/conf.d
+  #  networks:
+  #    - host
+  
+  #php:
+  #  build: './php/'
+      #context: .
+      #dockerfile: /php/Dockerfile
+    #image: php:7.4-fpm-alpine
+    #volumes:
+    #  - ./public_html:/public_html
+  #  expose:
+  #    - 9000
+  #  networks:
+  #    - host
+      
+  app:
+    depends_on:
+      - db
+    build: .
+    restart: unless-stopped
+    #env_file: ./.env
+    ports:
+      - 6868:8080
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./:/usr/app
+    networks:
+      - host
+    
+  
+  db:
+    #build: './mysql/'
+      #context: .
+      #dockerfile: /mysql/Dockerfile
+    image: mariadb:10.3
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_USER: root
+      MYSQL_DATABASE: products
+      MYSQL_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - ./datab:/docker-entrypoint-initdb.d
+    networks:
+      - host
+  
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8181:80
+    environment:
+      - PMA_HOST=db
+    networks:
+      - host
+    
+networks:
+  host:
