@@ -45,6 +45,7 @@ services:
       #dockerfile: /mysql/Dockerfile
     image: mariadb:10.3
     command: --default-authentication-plugin=mysql_native_password
+    #command: "mysqld --init-file /data/application/init.sql"
     restart: always
     environment:
       MYSQL_USER: root
@@ -52,7 +53,9 @@ services:
       MYSQL_PASSWORD: 123456
       MYSQL_ROOT_PASSWORD: 123456
     volumes:
-      - ./datab:/docker-entrypoint-initdb.d
+      #- ./datab:/docker-entrypoint-initdb.d
+      - ./datab:/var/lib/mysql
+      - ./database/products.sql:/data/application/products.sql
     networks:
       - host
   
