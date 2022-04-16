@@ -5,6 +5,8 @@ const Product = function(product) {
   this.title = product.title;
   this.description = product.description;
   this.published = product.published;
+  this.warranty = product.warranty;
+  this.price = product.price;
 };
 
 Product.create = (newProduct, result) => {
@@ -73,8 +75,8 @@ Product.getAllPublished = result => {
 
 Product.updateById = (id, product, result) => {
   sql.query(
-    "UPDATE products SET title = ?, description = ?, published = ? WHERE id = ?",
-    [product.title, product.description, product.published, id],
+    "UPDATE products SET title = ?, description = ?, published = ?, warranty = ?, price = ? WHERE id = ?",
+    [product.title, product.description, product.published, product.warranty, product.price, id],
     (err, res) => {
       if (err) {
         console.log("error: ", err);
