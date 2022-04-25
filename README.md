@@ -1,6 +1,11 @@
 
-<h1 align="center">API</h1>
-<p align="center"><img src="https://user-images.githubusercontent.com/81504385/157374395-f5d81365-2e5d-47c3-a498-4dd8b88abd6c.png"/></p> 
+<h1 align="center">REAL - backend</h1>
+
+```json
+{
+  "message": "Welcome to API-crud application."
+}
+```
 
 ## Tabla de contenidos:
 ---
@@ -14,14 +19,30 @@
 ## Descripción y contexto
 ---
 
-> "Application Programming Interface - API" para Empresa que comercializa electrodomesticos
+💻📱 **Real - Backend** 💻📱 es una **API** que atiende las peticiones de datos que provienen desde el lado del cliente (Frontend) 💻💻💻
+
+La API realiza consultas a la tabla "products" de la Base de Datos en CLEVER CLOUD y envia las respuestas al cliente, respecto a la busqueda de productos diversos a adquirir.
+
+Puedes acceder a la API a traves de: <a href="https://real-back.vercel.app/api/products" target="_blank">https://real-back.vercel.app/api/products</a>
 
 ## Guía de usuario
 ---
 Tiene codigo para enlazar a Base de datos en MYSQL y tiene comandos que permiten el CRUD con un app en React Js
 
-![image](https://user-images.githubusercontent.com/81504385/157374748-f907708c-5d6e-41d0-9c97-c33a65da471f.png)
-
+```json
+{
+ "id": 47,
+ "title": "monitor",
+ "description": "lg",
+ "published": 0,
+ "image": "https://i.ibb.co/6ywmCtm/b0f9d82f1150.webp",
+ "model": "MK12",
+ "warranty": "01 año",
+ "quantity": "8",
+ "price": "450"
+},
+...
+```
  	
 ## Guía de instalación
 ---
@@ -32,7 +53,7 @@ npm install
 
 ### Run
 ```
-node server.js
+nodemon index.js
 ```
 
 Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
@@ -46,16 +67,12 @@ Tecnologias utilizadas
 | `🔭Frontend` | `⚡Backend` | `📫Database` |
 | ------ | ------ | ------ | 
 |  | Node js | Mysql |
-|  |  |  |
+|  | Express js | Clever Cloud |
 
 
-## 🌱 Beta version
-Pagina web
+
+### 💻Pagina web: 📱
 <ul>
-<li> <a href="https://apicrudreal.herokuapp.com/api/products" target="_blank">https://apicrudreal.herokuapp.com/api/products</a> </li>
-</ul>
-
-## 🎨 Maquetado - Figma
-<ul>
-<li> Coming Soon </li>
+<li> Frontend: <a href="https://real-front.netlify.app/" target="_blank">https://real-front.netlify.app/</a> </li>
+<li> Backend: <a href="https://real-back.vercel.app/api/products" target="_blank">https://real-back.vercel.app/api/products</a> </li>
 </ul>
