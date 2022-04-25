@@ -9,6 +9,7 @@ const Product = function(product) {
   this.published = product.published;
   this.warranty = product.warranty;
   this.price = product.price;
+  this.image = product.image;
 };
 
 Product.create = (newProduct, result) => {
