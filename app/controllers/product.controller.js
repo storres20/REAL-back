@@ -17,7 +17,8 @@ exports.create = (req, res) => {
     model: req.body.model,
     warranty: req.body.warranty,
     quantity: req.body.quantity,
-    price: req.body.price
+    price: req.body.price,
+    image: req.body.image
   });
 
   // Save Product in the database
