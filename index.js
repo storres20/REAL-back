@@ -26,7 +26,12 @@ app.get("/", (req, res) => {
 require("./app/routes/product.routes.js")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8080;
+/* const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
+}); */
+
+const server = app.listen(process.env.PORT || 8080, () => {
+  const port = server.address().port;
+  console.log(`Express is working on port ${port}`);
 });
