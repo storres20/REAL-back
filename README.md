@@ -23,7 +23,7 @@
 
 La API realiza consultas a la tabla "products" de la Base de Datos en CLEVER CLOUD y envia las respuestas al cliente, respecto a la busqueda de productos diversos a adquirir.
 
-Puedes acceder a la API a traves de: <a href="https://real-back.vercel.app/api/products" target="_blank">https://real-back.vercel.app/api/products</a>
+Puedes acceder a la API a traves de: <a href="https://real-back.herokuapp.com/api/products" target="_blank">https://real-back.herokuapp.com/api/products</a>
 
 ## Guía de usuario
 ---
@@ -74,5 +74,5 @@ Tecnologias utilizadas
 ### 💻Pagina web: 📱
 <ul>
 <li> Frontend: <a href="https://real-front.netlify.app/" target="_blank">https://real-front.netlify.app/</a> </li>
-<li> Backend: <a href="https://real-back.vercel.app/api/products" target="_blank">https://real-back.vercel.app/api/products</a> </li>
+<li> Backend: <a href="https://real-back.herokuapp.com/api/products" target="_blank">https://real-back.herokuapp.com/api/products</a> </li>
 </ul>
