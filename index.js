@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true })); /* bodyParser.urlencoded() is d
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to API-crud application." });
+  res.json({ message: "Welcome to Real Backend API-crud application." });
 });
 
 require("./app/routes/product.routes.js")(app);
